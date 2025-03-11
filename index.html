@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manvi Garg</title>
+  <link rel="icon" href="Logo.png" type="image/png">
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, Helvetica, sans-serif;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-image: url('pic.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 2;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      background: rgb(250, 255, 255);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .card-row {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      width: 100%;
+    }
+
+    .card {
+      width: 200px;
+      height: 200px;
+      color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card-c1 {
+      background-color: #191817;
+    }
+
+    .card-c2 {
+      background-color: #4a990a;
+    }
+
+    .card-c3 {
+      background-color: #09496a;
+    }
+
+    .card-c4 {
+      color: #191817;
+      background-color: #ffffff;
+    }
+
+    .card-c5 {
+      background-color: #5ed43d;
+    }
+
+    .card-c6 {
+      color: #ffffff;
+    }
+
+    .card:hover {
+      transform: scale(1.10);
+    }
+
+    .card-content {
+      padding: 45px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        align-items: center;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .card-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .card-row {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+    }
+
+    footer {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Hello, I am Manvi Garg<sub>(Web Developer/ ML Engineer)</sub></h1>
+    <div class="card-container">
+      <div class="card-row">
+        <div class="card card-c1" onclick="redirectTo('https://leetcode.com/u/manvi_garg-1128/')">
+          <div class="card-content">
+            <h2>Leetcode</h2>
+            <div class="logo-container"><img src="leet.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c2" onclick="redirectTo('https://www.hackerrank.com/profile/Manvi_11')">
+          <div class="card-content">
+            <h2>HackerRank</h2>
+            <div class="logo-container"><img src="hack.jpg" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c3" onclick="redirectTo('https://www.linkedin.com/in/manvi-garg-9a523b228/')">
+          <div class="card-content">
+            <h2>LinkedIn</h2>
+            <div class="logo-container"><img src="link.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="card card-c5" onclick="redirectTo('https://github.com/manvigarg11')">
+          <div class="card-content">
+            <h2>GitHub</h2>
+            <div class="logo-container"><img src="git.jpg" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c4" onclick="redirectTo('https://drive.google.com/drive/folders/1v7FwCTx1WPyy-BpN_JBhBj-b1-aMDYmv?usp=drive_link')">
+          <div class="card-content">
+            <h2>G - Drive</h2>
+            <div class="logo-container"><img src="gdrive1.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c7" onclick="handleResumeClick()">
+          <div class="card-content">
+            <h2>Resume|CV</h2>
+            <div class="logo-container"><img src="Res.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+
+        <div class="card card-c6" onclick="redirectTo('index1.html')">
+          <div class="card-content">
+            <h2>Live Projects</h2>
+            <div class="logo-container"><img src="projects.png" alt="Logo" class="logo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    All rights reserved 2024. &copy; Manvi Garg.
+  </footer>
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+    function handleResumeClick() {
+      const resumeUrl = 'MG Resume.pdf';
+      window.open(resumeUrl, '_blank');
+    }
+  </script>
+
+</body>
+</html>
